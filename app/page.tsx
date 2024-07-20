@@ -1,11 +1,11 @@
-import { auth } from '@/auth'
 import LogoutButton from '@/components/auth/LogoutButton.client'
 import ThemeToggle from '@/components/ThemeToggle'
+import getSession from '@/lib/helpers/getSession'
 import Link from 'next/link'
 import React from 'react'
 
 const Home = async () => {
-  const session = await auth()
+  const session = await getSession()
 
   return (
     <>

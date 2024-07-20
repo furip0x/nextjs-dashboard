@@ -1,7 +1,7 @@
-import { auth } from '@/auth'
+import getSession from '@/lib/helpers/getSession'
 
 const Profile = async () => {
-  const session = await auth()
+  const session = await getSession()
   const user = session?.user
 
   return (

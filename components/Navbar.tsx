@@ -12,9 +12,10 @@ import {
 import ThemeToggle from './ThemeToggle'
 import { auth } from '@/auth'
 import LogoutButton from './auth/LogoutButton.client'
+import getSession from '@/lib/helpers/getSession'
 
 const Navbar = async () => {
-  const session = await auth()
+  const session = await getSession()
   const user = session?.user
 
   return (
